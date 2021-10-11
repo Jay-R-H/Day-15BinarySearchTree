@@ -7,7 +7,11 @@ public class BinarySearchOperation {
         this.root = null;
     }
 
-
+    /*
+     * Purpose: Method to insert data.
+     *
+     * @param data: key to be inserted
+     */
     public void insert(int data) {
         Node newNode = new Node(data);
 
@@ -26,7 +30,9 @@ public class BinarySearchOperation {
                         parent.left = newNode;
                         return;
                     }
-                } else {
+                }
+                // Assigning data to right subtree.
+                else {
                     current = current.right;
                     if (current == null) {
                         parent.right = newNode;
@@ -37,7 +43,11 @@ public class BinarySearchOperation {
         }
     }
 
-
+    /*
+     * Purpose: Method to display inserted data.
+     *
+     * @param node
+     */
     public void inorderTraversal(Node node) {
         if (root == null)
             System.out.println("Tree is empty");
